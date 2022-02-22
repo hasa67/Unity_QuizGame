@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: dd9ef6bf2a12a4d48b025c2fa463a885
+timeCreated: 1599372919
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: A Titraj 1
+  fontNames:
+  - A Titraj 1
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
