@@ -540,9 +540,9 @@ namespace TapsellSDK {
 		static IEnumerator LoadNativeBannerAdImages (TapsellNativeBannerAd result) {
 
 			if (result.iconUrl != null && !result.iconUrl.Equals ("")) {
-				UnityWebRequest wwwIcon = UnityWebRequest.GetTexture (result.iconUrl);
+				UnityWebRequest wwwIcon = UnityWebRequestTexture.GetTexture (result.iconUrl);
 				yield return wwwIcon.Send ();
-				if (wwwIcon.isError) {
+				if (wwwIcon.isNetworkError) {
 					Debug.Log (wwwIcon.error);
 				} else {
 					result.iconImage = ((DownloadHandlerTexture) wwwIcon.downloadHandler).texture;
@@ -550,9 +550,9 @@ namespace TapsellSDK {
 			}
 
 			if (result.portraitStaticImageUrl != null && !result.portraitStaticImageUrl.Equals ("")) {
-				UnityWebRequest wwwPortrait = UnityWebRequest.GetTexture (result.portraitStaticImageUrl);
+				UnityWebRequest wwwPortrait = UnityWebRequestTexture.GetTexture (result.portraitStaticImageUrl);
 				yield return wwwPortrait.Send ();
-				if (wwwPortrait.isError) {
+				if (wwwPortrait.isNetworkError) {
 					Debug.Log (wwwPortrait.error);
 				} else {
 					result.portraitBannerImage = ((DownloadHandlerTexture) wwwPortrait.downloadHandler).texture;
@@ -560,9 +560,9 @@ namespace TapsellSDK {
 			}
 
 			if (result.landscapeStaticImageUrl != null && !result.landscapeStaticImageUrl.Equals ("")) {
-				UnityWebRequest wwwLandscape = UnityWebRequest.GetTexture (result.landscapeStaticImageUrl);
+				UnityWebRequest wwwLandscape = UnityWebRequestTexture.GetTexture (result.landscapeStaticImageUrl);
 				yield return wwwLandscape.Send ();
-				if (wwwLandscape.isError) {
+				if (wwwLandscape.isNetworkError) {
 					Debug.Log (wwwLandscape.error);
 				} else {
 					result.landscapeBannerImage = ((DownloadHandlerTexture) wwwLandscape.downloadHandler).texture;
